@@ -5,7 +5,7 @@
 int count = 0;
 int choice;
 int receiver(int* arr, int val, int k){
-	int ack = rand() % k;
+	int ack = rand() % val;
 	choice = rand() % 2;
 	if(choice == 1){
 		return 0;
@@ -38,7 +38,7 @@ void sender(int* data, int n, int k){
 			}
 			if(choice == 0){
 				printf("\nReceived acknowledgement: %d\n", arr[received]);
-				count = count - val - received + 2;
+				count = count - val + received;
 
 			}
 		}
