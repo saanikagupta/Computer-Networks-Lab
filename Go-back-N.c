@@ -4,7 +4,7 @@
 
 int count = 0;
 int choice;
-int receiver(int* arr, int val, int k){
+int receiver(int* arr, int val){
 	int ack = rand() % val;
 	choice = rand() % 2;
 	if(choice == 1){
@@ -27,7 +27,7 @@ void sender(int* data, int n, int k){
 
 		//count=4,val=3,received=1
 		printf("\n");
-		int received = receiver(arr, val, k);
+		int received = receiver(arr, val);
 		if(count == n && choice == 1){
 			printf("\nData received!");
 			printf("\nCommunication over");
